@@ -1,5 +1,6 @@
 sample git test
 
 sample change done by yashwanth
-
 new change for merge conflict
+karthik change
+
