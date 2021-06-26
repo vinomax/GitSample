@@ -1,25 +1,13 @@
 pipeline {
     agent any
 
-    stages {
-        stage('checkout'){
-            steps{
-                echo 'checkout..'
-            }
-        }    
+    stages {        
         stage('Build') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                bat '''
+                cd WebApp
+                mvn clean install
+                '''
             }
         }
     }
